@@ -51,7 +51,7 @@
     </div>
 
     <div id="navbar">
-      <div class="mainDash">
+      <div class="container">
       <ul class="list-inline">
       {% show_menu 0 100 100 100 "includes/menu.html" %}
       </ul>
@@ -59,15 +59,17 @@
     </div>
     <!-- Page Header -->
     <!-- Main Content -->
-    <div class="row mainDash" style="margin-top:30px;">
-    <div class="col-lg-2 col-md-3 mx-auto">
-         {% static_placeholder "left_content" %} 
-      </div>
-     <div class="col-lg-7 col-md-1 mx-auto">
-        {% block content %} {% placeholder "content" %} {% endblock %}
-      </div>
-      <div class="col-lg-3 col-md-5 mx-auto">
-         {% static_placeholder "right_content" %} 
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 mx-auto">
+            {% static_placeholder "left_content" %} 
+          </div>
+        <div class="col-lg-7 col-md-1 mx-auto">
+          {% block content %} {% placeholder "content" %} {% endblock %}
+        </div>
+        <div class="col-lg-3 col-md-5 mx-auto">
+          {% static_placeholder "right_content" %} 
+        </div>
       </div>
     </div>
     <!-- Footer -->
