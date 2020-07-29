@@ -1,0 +1,92 @@
+{% load staticfiles i18n cms_tags sekizai_tags menu_tags thumbnail %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="{% page_attribute 'meta_description' %}"
+    />
+    <meta name="author" content="" />
+
+    <title>
+      {% block title %} {% page_attribute "page_title" %} - {{ request.site.name
+      }} {% endblock title %}
+    </title>
+     {% if request.toolbar %}
+    <!-- Bootstrap core CSS -->
+    {% include 'head.html' %}
+    {% endif %} {% render_block "css" %} {{ ALDRYN_SNAKE.render_head }}
+  </head>
+
+  <body>
+    {% cms_toolbar %}
+   
+
+    {% block header %}
+    <div class="header">
+      <img src="{% with image=request.current_page.pagefieldextension.background_image %}{% if image %}{% thumbnail image 1200x400 crop subject_location=image.subject_location %}{% else %}{% endif %}{% endwith %}">
+      {% render_model_block request.current_page.pagefieldextension %}
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="page-heading">
+                 <p>{% render_model request.current_page "page_title" %}</p>
+                  {% if request.current_page.pagefieldextension.subtitle %}
+                      <hr class="small">
+                      <span class="subheading">
+                          {{ request.current_page.pagefieldextension.subtitle }}
+                      </span>
+                  {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endrender_model_block %}
+ {% endblock %}
+    </div>
+
+    <div id="navbar">
+      <div class="mainDash">
+      <ul class="list-inline">
+      {% show_menu 0 100 100 100 "includes/menu.html" %}
+      </ul>
+      </div>  
+    </div>
+    <!-- Page Header -->
+    <!-- Main Content -->
+    <div class="row mainDash" style="margin-top:30px;">
+    <div class="col-lg-2 col-md-3 mx-auto">
+         {% static_placeholder "left_content" %} 
+      </div>
+     <div class="col-lg-7 col-md-1 mx-auto">
+        {% block content %} {% placeholder "content" %} {% endblock %}
+      </div>
+      <div class="col-lg-3 col-md-5 mx-auto">
+         {% static_placeholder "right_content" %} 
+      </div>
+    </div>
+    <!-- Footer -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+              {% static_placeholder "footer" %}
+            <p class="copyright text-muted">
+              Copyright &copy; {{ request.site.name }} {% now "Y" %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    {% include 'scripts.html' %}
+    {% render_block "js" %}
+  </body>
+</html>

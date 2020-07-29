@@ -1,0 +1,161 @@
+{% load static %}
+
+<link
+      href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet" />
+    <!-- django CMS toolbar adjustment -->
+ 
+    <style>
+      body {  
+      font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      font-size: 1.0rem;
+      
+      }
+      .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+      }
+
+      #navbar {
+        overflow: hidden;
+        background-color: #000;
+        z-index:10;
+      }
+
+      #navbar a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 10px 16px;
+          text-decoration: none;
+          font-size: 14px;
+      }
+
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #navbar a.active {
+        background-color: #ddd;
+        color: white;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 60px;
+      }
+      header.masthead {
+            margin-bottom: 50px;
+            background: no-repeat center center;
+            background-attachment: scroll;
+            position: relative;
+            background-size: cover;
+        }
+      header.masthead .overlay {
+        opacity: 8;
+    } 
+   
+    @media only screen and (max-width: 1400px) { 
+      .mainDash {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
+     @media only screen and (min-width: 1413px) { 
+      .mainDash {
+        margin-right: 300px;
+        margin-left: 300px;
+      }
+    }
+      .page-heading p {
+        font-size:12px;
+      }
+      .cms-toolbar-expanded .navbar.fixed-top {
+        margin-top: 45px;
+      }
+      header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading {
+          padding: 50px 0;
+      }
+      .post-preview>a> .post-title {
+          font-size: 20px;
+      }
+      .post-preview>a>.post-subtitle {
+          font-weight: 100;
+          margin: 0 0 10px;
+      }
+      .post-preview>.post-meta {
+          font-size: 14px;
+      }
+      h1, h2, h4, h5, h6 {
+      font-weight: 600; 
+      }
+      
+      .h3, h3 {
+      font-size: 0.9rem;
+      font-weight: 600; 
+      }
+      #banner h3 {
+        font-size: 1.7rem;
+        font-weight: 600; 
+      }
+      #banner hr {
+        width: 0;
+      }
+      
+      p {
+    line-height: 1.5;
+    margin: 3px 0;
+    }
+    #ad {
+      text-align: center;
+    }
+    #cn__title {
+    background-color: #f2f2f2;
+    color: #404040;
+    font-size: 15px;
+    padding: 7px;
+    position: relative;
+    font-family: CNN,Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+    font-weight: 700;
+    font-size: 1.06667rem;
+    line-height: 1.375;
+    }
+      #footer li {display:inline;}
+      footer{
+        background-color: #ddd;
+      }
+    </style>

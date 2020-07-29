@@ -1,0 +1,34 @@
+{% extends CMS_TEMPLATE  %}
+{% load staticfiles i18n cms_tags sekizai_tags menu_tags thumbnail %}
+{% block meta %}
+    {% comment %}
+    This is needed if you can't add ``{% include "meta/meta.html" %}`` in the django CMS template attached to the blog
+    page.
+    If you have something like the snippet below in the main template used by the django CMS page, you don't need
+    this block and you can safely remove it when customizing the blog templates
+
+    ...
+    <html>
+        <head>
+        <title>{% block title %}{% page_attribute 'title' %}{% endblock title %}</title>
+        {% include "meta/meta.html" %}
+        ...
+
+    {% endcomment %}
+    {% if meta %}
+        {% include "meta/meta.html" %}
+    {% endif %}
+{% endblock meta %}
+<div class="row">
+    <div class="col-md-3">
+        {% placeholder 'left_banner' %}
+    </div>
+    <div class="col-md-9"> 
+    {% block content %}   
+        <div class="app app-blog">
+            {% block content_blog %}{% endblock %}
+        </div>
+
+    {% endblock content %}
+    </div>
+</div>
