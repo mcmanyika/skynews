@@ -30,7 +30,7 @@ SECRET_KEY = '!x1$7b(my=gme1)*)c8(l)eruqwr1%w&cojq7mj6@i!z!&rleb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 if DEBUG:
-    ALLOWED_HOSTS = ['localhost', '134.122.73.177']
+    ALLOWED_HOSTS = ['127.0.0.1', '134.122.73.177']
 else:
     ALLOWED_HOSTS = ['134.122.73.177']
 
