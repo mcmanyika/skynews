@@ -33,8 +33,8 @@ if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1',
                      'citizenagenda.cf', 'www.citizenagenda.cf']
 else:
-    ALLOWED_HOSTS = [
-        'citizenagenda.cf', 'www.citizenagenda.cf']
+    ALLOWED_HOSTS = ['zimlivesmatter.cf', 'www.zimlivesmatter.cf',
+                     'citizenagenda.cf', 'www.citizenagenda.cf']
 
 
 # Application definition
