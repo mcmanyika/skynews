@@ -179,6 +179,7 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
 
+
     'aldryn_apphooks_config',
     'aldryn_categories',
     'aldryn_common',

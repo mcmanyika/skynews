@@ -19,6 +19,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^secure/', admin.site.urls),  # NOQA
+    url(r'^captcha/', include('captcha.urls')),
     url(r'^', include('cms.urls')),
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
 )

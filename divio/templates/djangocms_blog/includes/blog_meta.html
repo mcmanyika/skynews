@@ -1,22 +1,23 @@
 {% load i18n easy_thumbnails_tags cms_tags %}
 
-{% comment %} <ul class="post-detail">
-    {% if post.author %}
+ {% comment %} <ul class="post-detail"> {% endcomment %}
+    {% comment %} {% if post.author %}
     <li>
         {% trans "by" %} <a href="{% url 'djangocms_blog:posts-author' post.author.get_username %}">{% if post.author.get_full_name %}{{ post.author.get_full_name }}{% else %}{{ post.author }}{% endif %}</a>
     </li>
-    {% endif %}
+    {% endif %} {% endcomment %}
+    <p class="small">
     {% if post.date_published %}
-    <li>
+    
+    <i class='far fa-clock'></i> 
         {{ post.date_published|date:"DATE_FORMAT" }}
-    </li>
     {% endif %}
     {% if post.date_featured %}
-    <li>
+    <i class='far fa-clock'></i> 
         {{ post.date_featured|date:"DATE_FORMAT" }}
-    </li>
     {% endif %}
-</ul> {% endcomment %}
+    </p>
+{% comment %} </ul>  {% endcomment %}
 {% comment %} <ul class="post-detail tags">
     {% if post.categories.exists %}
         {% for category in post.categories.all %}
