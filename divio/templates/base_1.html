@@ -26,7 +26,25 @@
   <body>
     {% cms_toolbar %}
    
-
+  <div id="main">
+    <div id="navbar">
+      <div class="container">
+      <ul class="list-inline">
+      {% show_menu 0 100 100 100 "includes/menu.html" %}
+      </ul>
+      <div>
+      <div class="row">
+      <div class="col-md-8"></div>
+        <div class="col-md-1">
+          {% placeholder "flag" %}
+        </div>  
+        <div class="col-md-3">
+        <span style="font-size:20px;cursor:pointer; color:red" onclick="openNav()">&#9776; Call For Help</span>
+        </div>
+        </div>
+      </div>
+      </div>  
+    </div>
     {% block header %}
     <div class="header">
       <img src="{% with image=request.current_page.pagefieldextension.background_image %}{% if image %}{% thumbnail image 1200x400 crop subject_location=image.subject_location %}{% else %}{% endif %}{% endwith %}">
@@ -50,13 +68,6 @@
  {% endblock %}
     </div>
 
-    <div id="navbar">
-      <div class="container">
-      <ul class="list-inline">
-      {% show_menu 0 100 100 100 "includes/menu.html" %}
-      </ul>
-      </div>  
-    </div>
     <!-- Page Header -->
     <!-- Main Content -->
     <div class="container" style="margin-top:30px;">
