@@ -100,7 +100,12 @@
         </div>
       </div>
     </footer>
-
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="container" style="background-color: #fff;">
+   {% static_placeholder "report_violation" %}
+  </div> 
+</div>  
     <!-- Bootstrap core JavaScript -->
     {% include 'scripts.html' %}
     {% render_block "js" %}
