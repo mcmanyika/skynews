@@ -1,0 +1,20 @@
+{% load staticfiles i18n cms_tags sekizai_tags menu_tags thumbnail %}
+
+<div id="navbar">
+    <div class="container">
+      <ul class="list-inline">
+      {% show_menu 0 100 100 100 "includes/menu.html" %}
+      </ul>
+    <div>
+      <div class="row">
+      <div class="col-md-8"></div>
+        <div class="col-md-1">
+          {% placeholder "flag" %}
+        </div>  
+        <div class="col-md-3">
+        <span style="font-size:15px;cursor:pointer; color:red" onclick="openNav()">&#9776; CALL FOR HELP</span>
+        </div>
+        </div>
+      </div>
+    </div>  
+</div>
