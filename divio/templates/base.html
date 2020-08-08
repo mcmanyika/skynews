@@ -49,7 +49,7 @@
     </div>
     {% block header %}
     <header  class="masthead"  style="background-image: url('{% with image=request.current_page.pagefieldextension.background_image %}{% if image %}{% thumbnail image 1200x400 crop subject_location=image.subject_location %}{% else %}{% endif %}{% endwith %}')">
-    {% comment %} <div class="overlay"></div> {% endcomment %}
+    <div class="overlay"></div>
       {% render_model_block request.current_page.pagefieldextension %}
         <div class="container">
           <div class="row">
