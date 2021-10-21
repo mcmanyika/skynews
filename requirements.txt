@@ -10,7 +10,7 @@ aldryn-snake==1.0.1
 aldryn-translation-tools==0.3.0
 asgiref==3.2.10
 autopep8==1.5.3
-Babel==2.8.0
+Babel==2.9.1
 backport-collections==0.1
 cachetools==4.1.1
 certifi==2020.6.20
