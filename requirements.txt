@@ -23,7 +23,7 @@ django-absolute==0.3
 django-appconf==1.0.4
 django-appdata==0.3.0
 django-classy-tags==1.0.0
-django-cms==3.7.3
+django-cms==3.7.4
 django-emailit==0.2.4
 django-filer==1.7.1
 django-formtools==2.2
