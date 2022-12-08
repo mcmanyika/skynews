@@ -13,7 +13,7 @@ autopep8==1.5.3
 Babel==2.8.0
 backport-collections==0.1
 cachetools==4.1.1
-certifi==2020.6.20
+certifi==2022.12.7
 chardet==3.0.4
 cssselect==1.1.0
 cssutils==1.0.2
